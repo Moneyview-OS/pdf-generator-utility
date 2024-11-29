@@ -24,7 +24,7 @@ import java.text.DecimalFormat;
 public class PdfPage {
 
     protected PdfGenerator pdfGenerator;
-    protected PdfContentByte over;
+    public PdfContentByte over;
     protected int fontSize = 14;
     protected int fontSizeForDetailsPage = 9;
 

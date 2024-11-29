@@ -38,7 +38,6 @@ import org.apache.commons.logging.LogFactory;
  **/
 @Getter
 public class PdfGenerator {
-    private static final String BLANK_PAGE = "";
     protected PdfReader reader;
     protected PdfStamper stamper;
     protected BaseFont font;
@@ -46,11 +45,7 @@ public class PdfGenerator {
     public PdfGenerator(String inputFileName, String outputFileName) throws IOException, DocumentException {
         reader = new PdfReader(inputFileName);
         stamper = new PdfStamper(reader, FileUtil.getOutputStream(outputFileName));
-    }
-
-    public PdfGenerator(String outputFileName) throws IOException, DocumentException {
-        reader = new PdfReader(BLANK_PAGE);
-        stamper = new PdfStamper(reader, FileUtil.getOutputStream(outputFileName));
+        font = BaseFont.createFont(BaseFont.HELVETICA_BOLD, BaseFont.WINANSI, BaseFont.NOT_EMBEDDED);
     }
 
     protected static final Log log = LogFactory.getLog(PdfGenerator.class);
