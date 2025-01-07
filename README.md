@@ -15,7 +15,6 @@ You must disclose any modifications made to iText.
 Producer line and copyright
 When using iText Core/Community under AGPL, you must prominently mention iText and include the iText copyright and AGPL license in output file metadata, and also retain the producer line in every PDF that is created or manipulated using iText.
 
-
 ### Examples ###
 
 * [PDF with images](src/main/java/com/whizdm/pdf/generator/example/PdfWithImages.java)
